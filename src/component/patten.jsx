@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Pattentable  from "./pattenbuilder/pattentable.jsx";
 import Colorpicker from "./pattenbuilder/colorpicker";
 import Preview from "./pattenbuilder/pattenpreviewtable";
+import swal from 'sweetalert2';
 
 
 
@@ -14,13 +15,15 @@ class Patten extends Component {
             "cardtype": this.props.cardtype,
             "cardamou": this.props.cardamount,
             "pattenOb": {},
-            "curColor": "#FFFFFF"
+            "curColor": "#FFFFFF",
+            "classhash": Math.random()
             
         }
         
 
         this.changepatten = this.changepatten.bind(this);
         this.changecolor  = this.changecolor.bind(this);
+        this.clearClickEvent = this.clearClickEvent.bind(this);
         
 
     }
@@ -29,7 +32,7 @@ class Patten extends Component {
 
         this.setState({
             "cardamou": newProp.cardamount,
-            "cardtype": newProp.cardtype
+            "cardtype": newProp.cardtype,
         })
         this.forceUpdate()
 
@@ -54,6 +57,23 @@ class Patten extends Component {
         // add the key and the color state
     }
 
+    clearClickEvent(event){
+
+        var thisObj = this;
+        swal({
+            title: "Are Your sure",
+            text: "are you about to clear your patten",
+            type: "warning",
+            showCancelButton: true,
+        }).then(function(result){
+
+            if(result.value){
+                thisObj.setState({pattenOb: {}});
+            }
+            
+        })
+    }
+
     render(){
         // add capeabilty to change the amount of cards used in a patten
         // add cap.. to change card type 
@@ -63,9 +83,11 @@ class Patten extends Component {
                     changecolor={this.changecolor} 
                     currentcolor={this.state.curColor} 
                 />
+                <div className="button-pannel">
+                    <button onClick={this.clearClickEvent} className="reset" >clear</button>
+                </div>
             </div>
             <div className="designer">
-
                 <Pattentable 
                     cards_amounts={this.state.cardamou} 
                     cards_type={this.state.cardtype} 
@@ -74,6 +96,8 @@ class Patten extends Component {
                     mirror="false"
                     numbers="true"
                 />
+
+                
             </div>
             
             <div className="preview-group" >

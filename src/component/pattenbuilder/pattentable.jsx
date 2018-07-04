@@ -12,6 +12,8 @@ class Pattentable extends Component {
             'displayPatten': props.current_patten,
             'mirror': props.mirror,
             'num': props.numbers,
+            // 'hash': props.hash,
+
             
         }
 
@@ -20,7 +22,8 @@ class Pattentable extends Component {
     componentWillReceiveProps(newProp){
         this.setState({
             "cards_amounts": newProp.cards_amounts,
-            "cards_type": newProp.cards_type
+            "cards_type": newProp.cards_type,
+            "displayPatten": newProp.current_patten
         });
         this.forceUpdate();
     }
@@ -53,7 +56,7 @@ class Pattentable extends Component {
         }
 
         return (
-            <table>{table}</table>
+            <table>{table} </table>
         )
 
     }
