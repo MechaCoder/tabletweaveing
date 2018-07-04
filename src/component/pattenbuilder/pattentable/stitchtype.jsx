@@ -28,7 +28,7 @@ class StitchType extends Component {
     render(){
 
         return(
-            <div onClick={this.clickEventChange} > {this.state.stitch[this.state.index]} </div>
+            <div onClick={this.clickEventChange} className="stitch-type" > {this.state.stitch[this.state.index]} </div>
         )
 
     }

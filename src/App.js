@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 
 import Patten from './component/patten';
+import BasicTour from './component/helper/tour';
 
 
 class App extends Component {
@@ -56,6 +56,7 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">The Marvellous Mechanical Tablet Weaving Thing.</h1>
+          <BasicTour />
         </header>
 
         <div className="app-body">
