@@ -18,7 +18,8 @@ class Preview extends Component {
 
         this.setState({
             "card_amounts": newProp.cards_amounts,
-            "card_type": newProp.cards_type
+            "card_type": newProp.cards_type,
+            "stateobj": newProp.current_patten
         })
         this.forceUpdate();
 
