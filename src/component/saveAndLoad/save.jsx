@@ -28,8 +28,7 @@ class Save extends Component {
     }
 
     onSubmitForm(event){
-        event.preventDefault()
-        //window.localStorage.
+        event.preventDefault();
         var temp = localStorage.getItem("pattens");
 
         if(typeof(temp) === "string"){
@@ -42,7 +41,7 @@ class Save extends Component {
         
         temp[event.target.name.value] = this.state.save;
 
-        var temp = JSON.stringify(temp)
+        temp = JSON.stringify(temp)
         localStorage.setItem("pattens", temp );
     }
 

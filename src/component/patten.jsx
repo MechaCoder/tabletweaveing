@@ -4,6 +4,7 @@ import Pattentable  from "./pattenbuilder/pattentable.jsx";
 import Colorpicker from "./pattenbuilder/colorpicker";
 import Preview from "./pattenbuilder/pattenpreviewtable";
 import Save from './saveAndLoad/save';
+import Load from './saveAndLoad/load';
 
 import swal from 'sweetalert2';
 
@@ -88,6 +89,7 @@ class Patten extends Component {
                 <div className="button-pannel">
                     <button onClick={this.clearClickEvent} className="reset" >clear</button>
                     <Save pattenObject={this.state.pattenOb} />
+                    <Load />
                 </div>
             </div>
             <div className="designer">
