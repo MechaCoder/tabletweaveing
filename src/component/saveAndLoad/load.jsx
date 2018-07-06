@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import swal from 'sweetalert2';
+// import swal from 'sweetalert2';
 
 class Load extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            "data": this.get()
+            "data": this.get(),
+            "hash": props.lockhash
         }
 
         this.onButtonClick = this.onButtonClick.bind(this);
     }
-
+    componentWillReceiveProps(newprop){
+        this.setState({
+            "hash": newprop.lockhash,
+            "data": this.get()
+        });
+    }
     get(){
         var data = localStorage.getItem("pattens");
         
@@ -39,6 +45,10 @@ class Load extends Component{
            }
        }
 
+       if(event.target.value === 'refresh'){
+            newdata = data;
+       }
+
        this.setState({"data": newdata});
        
        newdata = JSON.stringify(newdata);
@@ -60,7 +70,7 @@ class Load extends Component{
 
         return(<div>
             <h4>load</h4>
-            <input type="button" onClick={this.onButtonClick} value="refresh" />
+            {/* <input type="button" onClick={this.onButtonClick} value="refresh" /> */}
             <ol>{files}</ol>
         </div>)
     }

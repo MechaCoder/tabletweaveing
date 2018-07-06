@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import Load from './load';
 class Save extends Component {
     constructor(props){
         super(props);
 
         this.state = {
             "name": props.pattenName,
-            "save": props.pattenObject
+            "save": props.pattenObject,
+            "match": Math.random()
         }
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -17,8 +19,6 @@ class Save extends Component {
         this.setState({
             save: newProp.pattenObject
         });
-
-        console.log(newProp.save)
     }
 
     onNameChange(event){
@@ -43,6 +43,7 @@ class Save extends Component {
 
         temp = JSON.stringify(temp)
         localStorage.setItem("pattens", temp );
+        this.setState({"match": Math.random()})
     }
 
     render(){
@@ -64,6 +65,8 @@ class Save extends Component {
                 <form onSubmit={this.onSubmitForm}>
                     <input type="text" name="name" value={this.state.name} onChange={this.onNameChange} /><input type="submit" value="Save Button" />
                 </form>
+
+                <Load lockhash={this.state.match} />
             </div>
         )
     }
