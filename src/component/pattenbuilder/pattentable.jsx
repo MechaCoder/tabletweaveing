@@ -11,10 +11,7 @@ class Pattentable extends Component {
             'passPatten': props.change_obj,
             'displayPatten': props.current_patten,
             'mirror': props.mirror,
-            'num': props.numbers,
-            // 'hash': props.hash,
-
-            
+            'num': props.numbers
         }
 
     }
@@ -56,7 +53,7 @@ class Pattentable extends Component {
         }
 
         return (
-            <table>{table} </table>
+            <table>{table}</table>
         )
 
     }

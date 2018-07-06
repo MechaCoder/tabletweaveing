@@ -22,8 +22,6 @@ class Load extends Component{
         }
 
         data = JSON.parse(data);
-
-        // this.setState({"data": data});
         return data;
     }
 
@@ -56,13 +54,13 @@ class Load extends Component{
 
         var data = this.state.data
         var datakeys = Object.keys(data);
-
         for(var i = 0; i < datakeys.length; i++){
             files.push( <li>{datakeys[i]} <input data-name={datakeys[i]} type="button"  onClick={this.onButtonClick} value="delete" /></li> );
         }
 
         return(<div>
             <h4>load</h4>
+            <input type="button" onClick={this.onButtonClick} value="refresh" />
             <ol>{files}</ol>
         </div>)
     }
