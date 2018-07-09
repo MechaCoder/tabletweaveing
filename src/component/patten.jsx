@@ -18,6 +18,12 @@ class Patten extends Component {
 
         console.log(props);
 
+        var loaded = {}
+
+        if (props.loaded !== undefined){
+            loaded = props.loaded;
+        }
+
         this.state = {
             "cardtype": this.props.cardtype,
             "cardamou": this.props.cardamount,

@@ -13,6 +13,9 @@ if (all_pattens !== null && saved_patten !== null){
 // loading patten
 
   loaded_patten = all_pattens[saved_patten];
+  if(loaded_patten === undefined){
+    loaded_patten = {}
+  }
 
 }
 
