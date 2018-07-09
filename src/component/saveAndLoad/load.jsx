@@ -34,8 +34,10 @@ class Load extends Component{
     onButtonClick(event){
         var data = this.get();
         var newdata = {}
-
-       var keys = Object.keys(data);
+        if(data === null){
+            data = {}
+        }
+        var keys = Object.keys(data);
 
        if(event.target.value === 'delete'){
            for(var i = 0; i < keys.length; i++){
@@ -63,9 +65,16 @@ class Load extends Component{
         var files = [];
 
         var data = this.state.data
+
+        if(data === null){
+            data = {}
+        }
         var datakeys = Object.keys(data);
         for(var i = 0; i < datakeys.length; i++){
-            files.push( <li>{datakeys[i]} <input data-name={datakeys[i]} type="button"  onClick={this.onButtonClick} value="delete" /></li> );
+            files.push( <li>{datakeys[i]} 
+                <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="delete" />
+                <input data-name={datakeys[i]} type="button" value="Load" />
+            </li> );
         }
 
         return(<div>

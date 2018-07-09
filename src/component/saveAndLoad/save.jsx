@@ -51,13 +51,13 @@ class Save extends Component {
         if(
             typeof(Storage) === 'undefined'
         ){
-            return(<div className="savemod">saveing not permmited</div>)
+            return(<div className="savemod">saveing not permmited</div>);
         }
 
         if(
             typeof(this.state.save) === 'undefined'
         ){
-            return(<div className="savemod">saveing not permmited</div>)
+            return(<div className="savemod">saveing not permmited</div>);
         }
 
         return(
@@ -68,7 +68,7 @@ class Save extends Component {
 
                 <Load lockhash={this.state.match} />
             </div>
-        )
+        );
     }
 }
 
