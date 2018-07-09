@@ -36,7 +36,7 @@ class Pattentable extends Component {
                     
                     var displayColor = this.state['displayPatten'][ (row + "|" + col) ];
 
-                        var item = <td data-row={row} data-col={col} style={{ 'background-color': displayColor }} onClick={this.state.passPatten}></td>
+                    var item = <td data-row={row} data-col={col} style={{ 'background-color': displayColor }} onClick={this.state.passPatten}></td>
                         if(this.state.mirror === "true"){
                             temp.unshift(item);
                         }else{

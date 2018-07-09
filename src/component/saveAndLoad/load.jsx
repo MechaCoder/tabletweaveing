@@ -32,6 +32,7 @@ class Load extends Component{
     }
 
     onButtonClick(event){
+
         var data = this.get();
         var newdata = {}
         if(data === null){
@@ -49,6 +50,14 @@ class Load extends Component{
 
        if(event.target.value === 'refresh'){
             newdata = data;
+       }
+
+       if(event.target.value === 'Load'){
+
+            localStorage.setItem('loaded_patten', event.target.attributes[0].value);
+
+            window.location.reload();
+            return;
        }
 
        this.setState({"data": newdata});
@@ -73,7 +82,7 @@ class Load extends Component{
         for(var i = 0; i < datakeys.length; i++){
             files.push( <li>{datakeys[i]} 
                 <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="delete" />
-                <input data-name={datakeys[i]} type="button" value="Load" />
+                <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="Load" />
             </li> );
         }
 

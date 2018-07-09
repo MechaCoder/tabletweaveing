@@ -4,6 +4,18 @@ import './App.css';
 import Patten from './component/patten';
 import BasicTour from './component/helper/tour';
 
+//get the loaded patten name
+var all_pattens = JSON.parse( localStorage.getItem('pattens') );
+var saved_patten = localStorage.getItem('loaded_patten');
+var loaded_patten = {};
+
+if (all_pattens !== null && saved_patten !== null){
+// loading patten
+
+  loaded_patten = all_pattens[saved_patten];
+
+}
+
 
 class App extends Component {
   constructor(props){
@@ -12,6 +24,8 @@ class App extends Component {
     this.state = {
       cardType: 4,
       cardAmount: 10,
+      pattenLoad: loaded_patten
+
     }
 
     this.changeCardamount = this.changeCardamount.bind(this);
@@ -74,7 +88,8 @@ class App extends Component {
               <input type="button" onClick={this.changeCardType} value="-" />
             </div>
           </div>
-          <Patten 
+          <Patten
+            loaded={this.state.pattenLoad}
             cardtype={this.state.cardType} 
             cardamount={this.state.cardAmount}
           />

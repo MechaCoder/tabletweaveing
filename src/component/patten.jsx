@@ -14,10 +14,14 @@ class Patten extends Component {
     constructor(props){
         super(props);
 
+        console.log("able")
+
+        console.log(props);
+
         this.state = {
             "cardtype": this.props.cardtype,
             "cardamou": this.props.cardamount,
-            "pattenOb": {},
+            "pattenOb": props.loaded,
             "curColor": "#FFFFFF",
             "classhash": Math.random()
             
