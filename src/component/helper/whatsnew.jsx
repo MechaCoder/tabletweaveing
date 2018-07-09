@@ -5,8 +5,14 @@ class WhatsNew extends Component {
     constructor(props){
         super(props);
 
+        var seen = localStorage.getItem('WhatsNewSeen');
+        var seenval = true;
+        if(seen != null && seen === 'apple'){
+            seenval = false;
+        }
+
         this.state={
-            "isOpen": true,
+            "isOpen": seenval,
         };
 
         this.openTour = this.openTour.bind(this);
@@ -16,13 +22,15 @@ class WhatsNew extends Component {
     closeTour(){
         this.setState({
             isOpen: false
-        })
+        });
+
+        localStorage.setItem('WhatsNewSeen', 'apple')
     }
 
     openTour(){
         this.setState({
             isOpen: true
-        })
+        });
     }
 
 

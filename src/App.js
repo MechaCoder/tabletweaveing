@@ -27,7 +27,8 @@ class App extends Component {
     this.state = {
       cardType: 4,
       cardAmount: 10,
-      pattenLoad: loaded_patten
+      pattenLoad: loaded_patten,
+      pattenName: saved_patten
 
     }
 
@@ -93,6 +94,7 @@ class App extends Component {
           </div>
           <Patten
             loaded={this.state.pattenLoad}
+            loaded_name={this.state.pattenName}
             cardtype={this.state.cardType} 
             cardamount={this.state.cardAmount}
           />

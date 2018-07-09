@@ -4,7 +4,6 @@ import Pattentable  from "./pattenbuilder/pattentable.jsx";
 import Colorpicker from "./pattenbuilder/colorpicker";
 import Preview from "./pattenbuilder/pattenpreviewtable";
 import Save from './saveAndLoad/save';
-// import Load from './saveAndLoad/load';
 
 import swal from 'sweetalert2';
 
@@ -13,8 +12,6 @@ import swal from 'sweetalert2';
 class Patten extends Component {
     constructor(props){
         super(props);
-
-        console.log("able")
 
         console.log(props);
 
@@ -29,9 +26,12 @@ class Patten extends Component {
             "cardamou": this.props.cardamount,
             "pattenOb": props.loaded,
             "curColor": "#FFFFFF",
+            "name_col": props.loaded_name,
             "classhash": Math.random()
             
         }
+
+        console.log(this.state);
         
 
         this.changepatten = this.changepatten.bind(this);
@@ -47,7 +47,7 @@ class Patten extends Component {
             "cardamou": newProp.cardamount,
             "cardtype": newProp.cardtype,
         })
-        this.forceUpdate()
+        this.forceUpdate();
 
     }
 
@@ -81,7 +81,14 @@ class Patten extends Component {
         }).then(function(result){
 
             if(result.value){
-                thisObj.setState({pattenOb: {}});
+                thisObj.setState({
+                    pattenOb: {},
+                });
+
+                localStorage.setItem("loaded_patten","");
+                window.location.reload();
+
+
             }
             
         })
@@ -98,8 +105,7 @@ class Patten extends Component {
                 />
                 <div className="button-pannel">
                     <button onClick={this.clearClickEvent} className="reset" >clear</button>
-                    <Save pattenObject={this.state.pattenOb} />
-                    {/* <Load lockhash={this.state.classhash} /> */}
+                    <Save pattenObject={this.state.pattenOb} pattenName={this.state['name_col']} />
                 </div>
             </div>
             <div className="designer">
