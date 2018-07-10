@@ -23,7 +23,7 @@ class Save extends Component {
 
     onNameChange(event){
         this.setState({
-            "name": this.state.name 
+            "name": event.target.value
         })
     }
 

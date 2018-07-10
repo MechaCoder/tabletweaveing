@@ -41,7 +41,13 @@ class Load extends Component{
         var keys = Object.keys(data);
 
        if(event.target.value === 'delete'){
+
+            if(!window.confirm("Are you sure you want to delete!")){
+                return;
+            }
+
            for(var i = 0; i < keys.length; i++){
+
                if(keys[i] !== event.target.attributes[0].value){
                     newdata[keys[i]] = data[keys[i]];
                }
@@ -88,7 +94,6 @@ class Load extends Component{
 
         return(<div>
             <h4>load</h4>
-            {/* <input type="button" onClick={this.onButtonClick} value="refresh" /> */}
             <ol>{files}</ol>
         </div>)
     }
