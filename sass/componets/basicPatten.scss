@@ -1,0 +1,49 @@
+.basic.patten {
+    display: inline-block;
+    clear: all;
+    border: 1px solid green;
+    width:  100%;
+    .controls {
+        display: block;
+        clear: both;
+    }
+    .button-pannel {
+        width: 45%;
+        float: right;
+    }
+    .picker {
+        width: 45%;
+        float: left;
+    }
+    .designer {
+        clear: both;
+        width: 25%;
+        float: left;
+        td {
+            border: 1px solid grey;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+    }
+
+    .preview-group {
+        float: right;
+        width: 75%;
+        span {
+            float: left;
+            width: 100%;
+        }
+        table {
+            float: left;
+        }
+        td {
+            border: 1px solid grey;
+            font-size: 50px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+    }
+
+}

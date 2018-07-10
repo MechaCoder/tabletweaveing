@@ -9,6 +9,7 @@
     "react": "^16.4.1",
     "react-color": "^2.14.1",
     "react-dom": "^16.4.1",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.1.4",
     "reactour": "^1.8.1",
     "sweetalert2": "^7.24.4"

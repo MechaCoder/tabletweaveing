@@ -1,0 +1,19 @@
+.format-contorls {
+    display: block;
+    width: 100%;
+    .CardAmount {
+        float: left;
+        width: 45%
+
+    }
+    .CardType{
+        float: right;
+        width: 45%
+    }
+}
+.savemod ol {
+    display: scroll;
+    height: 100px;
+    overflow: scroll;
+    padding-bottom: 50px;
+}

@@ -115,7 +115,7 @@ class Patten extends Component {
             
             <div className="preview-group" >
                 <Preview 
-                    amount="2"
+                    amount="3"
                     cards_amounts={this.state.cardamou}
                     cards_type={this.state.cardtype}
                     current_patten={this.state.pattenOb}

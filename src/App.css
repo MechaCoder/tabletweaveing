@@ -1,50 +1,72 @@
-.App {
-  text-align: center; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
 .App-header {
-  background-color: #222;
-  /* height: 150px; */
-  padding: 20px;
-  color: white; }
+  background-color: darkslategrey;
+  padding: 20px; }
+  .App-header .App-title {
+    color: #fff;
+    text-align: center; }
 
-.App-title {
-  font-size: 1.5em; }
+.tour-buttons {
+  position: inline-block;
+  float: right; }
+  .tour-buttons .whatsNew {
+    float: left; }
+  .tour-buttons button {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    background-color: red;
+    border: 0px; }
 
-.App-intro {
-  font-size: large; }
+.format-contorls {
+  display: block;
+  width: 100%; }
+  .format-contorls .CardAmount {
+    float: left;
+    width: 45%; }
+  .format-contorls .CardType {
+    float: right;
+    width: 45%; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+.savemod ol {
+  display: scroll;
+  height: 100px;
+  overflow: scroll;
+  padding-bottom: 50px; }
 
-.basic.patten td {
-  height: 20px;
-  width: 20px;
-  border: 1px solid grey; }
-
-.designer {
-  float: left;
-  width: 24%; }
-
-.preview-group {
-  float: right;
-  width: 75%; }
-
-.preview-group table {
-  float: left; }
-
-.format-contorls > div {
-  width: 45%;
-  float: left; }
-
-.format-contorls > div input {
-  background-color: red;
-  border: none;
-  height: 25px;
-  width: 25px; }
+.basic.patten {
+  display: inline-block;
+  clear: all;
+  border: 1px solid green;
+  width: 100%; }
+  .basic.patten .controls {
+    display: block;
+    clear: both; }
+  .basic.patten .button-pannel {
+    width: 45%;
+    float: right; }
+  .basic.patten .picker {
+    width: 45%;
+    float: left; }
+  .basic.patten .designer {
+    clear: both;
+    width: 25%;
+    float: left; }
+    .basic.patten .designer td {
+      border: 1px solid grey;
+      width: 25px;
+      height: 25px;
+      text-align: center; }
+  .basic.patten .preview-group {
+    float: right;
+    width: 75%; }
+    .basic.patten .preview-group span {
+      float: left;
+      width: 100%; }
+    .basic.patten .preview-group table {
+      float: left; }
+    .basic.patten .preview-group td {
+      border: 1px solid grey;
+      font-size: 50px;
+      width: 25px;
+      height: 25px;
+      text-align: center; }

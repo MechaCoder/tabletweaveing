@@ -1,59 +1,63 @@
-.App {
-    text-align: center;
-  }
+// .App {
+//     text-align: center;
+//   }
   
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//     height: 80px;
+//   }
   
-  .App-header {
-    background-color: #222;
-    /* height: 150px; */
-    padding: 20px;
-    color: white;
-  }
+//   .App-header {
+//     background-color: #222;
+//     /* height: 150px; */
+//     padding: 20px;
+//     color: white;
+//   }
   
-  .App-title {
-    font-size: 1.5em;
-  }
+//   .App-title {
+//     font-size: 1.5em;
+//   }
   
-  .App-intro {
-    font-size: large;
-  }
+//   .App-intro {
+//     font-size: large;
+//   }
   
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+//   @keyframes App-logo-spin {
+//     from { transform: rotate(0deg); }
+//     to { transform: rotate(360deg); }
+//   }
   
-  .basic.patten td{
-    height: 20px;
-    width:  20px;
-    border: 1px solid grey
-  }
+//   .basic.patten td{
+//     height: 20px;
+//     width:  20px;
+//     border: 1px solid grey
+//   }
   
-  .designer {
-    float: left;
-    width:24%;
-  }
-  .preview-group {
-    float: right;
+//   .designer {
+//     float: left;
+//     width:24%;
+//   }
+//   .preview-group {
+//     float: right;
     
-    width: 75%
-  }
-  .preview-group table {
-    float: left;
-  }
+//     width: 75%
+//   }
+//   .preview-group table {
+//     float: left;
+//   }
   
-  .format-contorls>div {
-    width: 45%;
-    float: left;
-  }
+//   .format-contorls>div {
+//     width: 45%;
+//     float: left;
+//   }
   
-  .format-contorls>div input{
-    background-color: red;
-    border: none;
-    height: 25px;
-    width: 25px;
-  }
+//   .format-contorls>div input{
+//     background-color: red;
+//     border: none;
+//     height: 25px;
+//     width: 25px;
+//   }
+
+@import './componets/header.scss';
+@import './componets/formatControls.scss';
+@import './componets/basicPatten';
