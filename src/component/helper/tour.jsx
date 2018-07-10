@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Tour from 'reactour';
 
+import WhatsNew from './whatsnew';
+
 class BasicTour extends Component{
 
     constructor(props){
@@ -36,6 +38,7 @@ class BasicTour extends Component{
                     isOpen={this.state.isOpen}
                     onRequestClose={this.closeTour}
                 />
+                <WhatsNew />
             </div>
         )
     }
