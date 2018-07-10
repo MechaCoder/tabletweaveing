@@ -5,6 +5,7 @@
   "homepage": "https://mechacoder.github.io/tabletweaveing/",
   "dependencies": {
     "gh-pages": "^1.2.0",
+    "gulp-sass": "^4.0.1",
     "react": "^16.4.1",
     "react-color": "^2.14.1",
     "react-dom": "^16.4.1",
@@ -19,5 +20,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
