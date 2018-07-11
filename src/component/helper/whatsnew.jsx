@@ -8,7 +8,7 @@ class WhatsNew extends Component {
 
         var seen = localStorage.getItem('WhatsNewSeen');
         var seenval = true;
-        if(seen != null && seen === 'apple'){
+        if(seen != null && seen === 'pear'){
             seenval = false;
         }
 
@@ -25,7 +25,7 @@ class WhatsNew extends Component {
             isOpen: false
         });
 
-        localStorage.setItem('WhatsNewSeen', 'apple')
+        localStorage.setItem('WhatsNewSeen', 'pear')
     }
 
     openTour(){
@@ -65,5 +65,9 @@ const steps = [
     {
         selector: '.button-pannel .savemod',
         content: `you can now save the pattens your working on and delete them if you wish`
+    },
+    {
+        selector: '.controls>.picker',
+        content: `I have made some changes to the picker so you can choose diffrent collor pickers`
     }
 ]

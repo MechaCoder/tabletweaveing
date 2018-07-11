@@ -15,7 +15,7 @@ class Colorpicker extends Component {
             open: false,
 
             changeFuction: props.changecolor,
-            currentpicker: "github"
+            currentpicker: "compact"
         }
         
         this.handleChangeComplete = this.handleChangeComplete.bind(this);
@@ -29,20 +29,22 @@ class Colorpicker extends Component {
     }
 
     handleChangeSelect(selectedOption){
-        console.log(selectedOption.value);
-
+        // console.log(selectedOption.value);
+        if(selectedOption === null){
+            return;
+        }
         this.setState({'currentpicker': selectedOption.value});
     }
 
     render(){
 
-        var opts = [
+        var pickeroptions = [
             {value: "github", label: "GitHub"},
             {value: "compact", label: "Compact"},
-            {value: "circle", label: "Circle"},
+            // {value: "circle", label: "Circle"},
         ];
 
-        var picker = [];
+        var picker;
 
         switch(this.state.currentpicker){
             case "github":
@@ -54,13 +56,17 @@ class Colorpicker extends Component {
             case "circle":
                 picker = (<CirclePicker color={this.state.background} onChangeComplete={this.handleChangeComplete} />);
                 break;
+            default:
+                picker = (<CompactPicker color={this.state.background} onChangeComplete={this.handleChangeComplete} />);
+                break;
         }
 
         return(
             <div className="picker">
                 <h4>color picker</h4>
                 <div className="controls">
-                    <Select options={opts} value={this.state.currentpicker} onChange={this.handleChangeSelect} />
+                    <Select clearable={false} options={pickeroptions} value={this.state.currentpicker} onChange={this.handleChangeSelect} />
+                    
                 </div>
                     {picker}
             </div>
