@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Tour from 'reactour';
 
+
 import WhatsNew from './whatsnew';
+// import FontAwesome from 'react-fontawesome';
 
 class BasicTour extends Component{
 
@@ -31,14 +33,16 @@ class BasicTour extends Component{
 
     render(){
         return(
-            <div className="tour" >
-                <button onClick={this.openTour}> HELP ! </button>
-                <Tour 
-                    steps={steps}
-                    isOpen={this.state.isOpen}
-                    onRequestClose={this.closeTour}
-                />
-                <WhatsNew />
+            <div className="tour-buttons">
+                <div className="tour" >
+                    <button onClick={this.openTour}>?</button>
+                    <Tour 
+                        steps={steps}
+                        isOpen={this.state.isOpen}
+                        onRequestClose={this.closeTour}
+                    />
+                    <WhatsNew />
+                </div>
             </div>
         )
     }

@@ -1,0 +1,24 @@
+.App-header{
+    background-color: darkslategrey;
+    padding: 20px;
+
+    .App-title{
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.tour-buttons {
+    position: inline-block;
+    float: right;
+    .whatsNew{
+        float: left
+    }
+    button {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        background-color: red;
+        border: 0px;
+    }
+}
