@@ -1,6 +1,12 @@
 .format-contorls {
     display: block;
     width: 100%;
+    text-align: center;
+    input{
+        border: solid 0.5pt darkred;
+        background-color: red;
+    }
+
     .CardAmount {
         float: left;
         width: 45%
@@ -11,9 +17,55 @@
         width: 45%
     }
 }
-.savemod ol {
+.savemod div {
     display: scroll;
     height: 100px;
     overflow: scroll;
     padding-bottom: 50px;
+
+    border-bottom: 1px solid grey;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+
+    width: 80%;
+    td {
+        border: 1px solid grey;
+        width: 30%;
+    }
+    .p-title{
+        width: 70%;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+.reset {
+    background-color: red;
+    color: #fff;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.savemod{
+    input[type="text"] {
+        background-color: pink;
+        padding: 5px;
+        border-radius: 10px;
+        width: 70%;
+    }
+    input[type="submit"],
+    input[type="button"]{
+        background-color: red;
+        color: #fff;
+        &[value="Load"]{
+            //background-color: pink;
+            float: right;
+            // margin-right: 25px;
+        }
+        &[value="delete"]{
+            // margin-left: 25px;
+        }
+    }
+    
+
 }

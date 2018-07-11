@@ -64,7 +64,7 @@ class Save extends Component {
             <div className="savemod">
                 <form onSubmit={this.onSubmitForm}>
                     <input type="text" name="name" value={this.state.name} onChange={this.onNameChange} />
-                    <input type="submit" value="Save Button" />
+                    <input type="submit" value="Save" />
                 </form>
 
                 <Load lockhash={this.state.match} />

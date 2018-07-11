@@ -19,7 +19,11 @@
 
 .format-contorls {
   display: block;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
+  .format-contorls input {
+    border: solid 0.5pt darkred;
+    background-color: red; }
   .format-contorls .CardAmount {
     float: left;
     width: 45%; }
@@ -27,16 +31,47 @@
     float: right;
     width: 45%; }
 
-.savemod ol {
+.savemod div {
   display: scroll;
   height: 100px;
   overflow: scroll;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width: 80%; }
+  .savemod div td {
+    border: 1px solid grey;
+    width: 30%; }
+  .savemod div .p-title {
+    width: 70%;
+    text-align: center;
+    overflow: hidden; }
+
+.reset {
+  background-color: red;
+  color: #fff;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
+.savemod input[type="text"] {
+  background-color: pink;
+  padding: 5px;
+  border-radius: 10px;
+  width: 70%; }
+
+.savemod input[type="submit"],
+.savemod input[type="button"] {
+  background-color: red;
+  color: #fff; }
+  .savemod input[type="submit"][value="Load"],
+  .savemod input[type="button"][value="Load"] {
+    float: right; }
 
 .basic.patten {
   display: inline-block;
   clear: all;
-  border: 1px solid green;
   width: 100%; }
   .basic.patten .controls {
     display: block;
@@ -46,7 +81,12 @@
     float: right; }
   .basic.patten .picker {
     width: 45%;
-    float: left; }
+    float: left;
+    margin-left: 15px; }
+    .basic.patten .picker h4 {
+      text-align: center; }
+    .basic.patten .picker > div {
+      left: 25%; }
   .basic.patten .designer {
     clear: both;
     width: 25%;

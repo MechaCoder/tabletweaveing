@@ -1,7 +1,6 @@
 .basic.patten {
     display: inline-block;
     clear: all;
-    border: 1px solid green;
     width:  100%;
     .controls {
         display: block;
@@ -14,6 +13,13 @@
     .picker {
         width: 45%;
         float: left;
+        margin-left: 15px;
+        h4 {
+            text-align: center;
+        }
+        > div {
+            left: 25%;
+        }
     }
     .designer {
         clear: both;
@@ -44,6 +50,7 @@
             height: 25px;
             text-align: center;
         }
+        
     }
 
 }
