@@ -85,16 +85,22 @@ class Load extends Component{
             data = {}
         }
         var datakeys = Object.keys(data);
+
+
         for(var i = 0; i < datakeys.length; i++){
-            files.push( <li>{datakeys[i]} 
+
+
+            files.push( <tr> <td className="p-title"> {datakeys[i]} </td>
+                <td>
                 <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="delete" />
                 <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="Load" />
-            </li> );
+                </td>
+            </tr> );
         }
 
         return(<div>
             <h4>load</h4>
-            <ol>{files}</ol>
+            <table>{files}</table>
         </div>)
     }
 }

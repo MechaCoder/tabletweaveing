@@ -28,6 +28,7 @@ class Colorpicker extends Component {
 
         return(
             <div className="picker">
+                <h4>color picker</h4>
                     <CompactPicker 
                         color={this.state.background}
                         onChangeComplete={this.handleChangeComplete}
