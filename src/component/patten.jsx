@@ -22,8 +22,6 @@ class Patten extends Component {
             "classhash": Math.random()
             
         }
-
-        console.log(this.state);
         
 
         this.changepatten = this.changepatten.bind(this);
@@ -97,7 +95,7 @@ class Patten extends Component {
                 />
                 <div className="button-pannel">
                     <button onClick={this.clearClickEvent} className="reset" >clear</button>
-                    <Save pattenObject={this.state.pattenOb} pattenName={this.state['name_col']} />
+                    <Save pattenObject={this.state.pattenOb} pattenName={this.state['name_col']} col={this.state.cardtype} row={this.state.cardamou} />
                 </div>
             </div>
             <div className="designer">

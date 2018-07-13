@@ -8,7 +8,10 @@ class Save extends Component {
         this.state = {
             "name": props.pattenName,
             "save": props.pattenObject,
-            "match": Math.random()
+            "match": Math.random(),
+
+            "col": props.col,
+            "row": props.row
         }
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -17,7 +20,9 @@ class Save extends Component {
 
     componentWillReceiveProps(newProp){
         this.setState({
-            save: newProp.pattenObject
+            save: newProp.pattenObject,
+            cols: newProp.col,
+            row: newProp.row
         });
     }
 
@@ -38,10 +43,17 @@ class Save extends Component {
         if(temp === null){
             temp = {};
         }
-        
-        temp[event.target.name.value] = this.state.save;
 
-        temp = JSON.stringify(temp)
+        var t = {
+            patten: this.state.save,
+            d_cols: this.state.cols,
+            d_rows: this.state.row
+        }
+        
+        temp[event.target.name.value] = t;
+
+        temp = JSON.stringify(temp);
+
         localStorage.setItem("pattens", temp );
         this.setState({"match": Math.random()})
     }
@@ -66,6 +78,8 @@ class Save extends Component {
                     <input type="text" name="name" value={this.state.name} onChange={this.onNameChange} />
                     <input type="submit" value="Save" />
                 </form>
+                {this.state.col}
+                {this.state.row}
 
                 <Load lockhash={this.state.match} />
             </div>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+
 import './App.css';
-
 import Patten from './component/patten';
-import BasicTour from './component/helper/tour';
-
+import Header from './component/header';
 //get the loaded patten name
+
+
 var all_pattens = JSON.parse( localStorage.getItem('pattens') );
 var saved_patten = localStorage.getItem('loaded_patten');
 var loaded_patten = {};
@@ -16,8 +17,9 @@ if (all_pattens !== null && saved_patten !== null){
   if(loaded_patten === undefined){
     loaded_patten = {}
   }
-
 }
+
+console.log(loaded_patten.d_cols)
 
 
 class App extends Component {
@@ -27,13 +29,21 @@ class App extends Component {
     this.state = {
       cardType: 4,
       cardAmount: 10,
-      pattenLoad: loaded_patten,
+      pattenLoad: loaded_patten.patten,
       pattenName: saved_patten
 
     }
 
     this.changeCardamount = this.changeCardamount.bind(this);
     this.changeCardType = this.changeCardType.bind(this);
+
+    if(loaded_patten.d_rows !== undefined){
+      this.state['cardAmount'] = loaded_patten.d_rows;
+    }
+
+    if(loaded_patten.d_cols !== undefined){
+      this.state['cardType'] = loaded_patten.d_cols;
+    }
   }
 
   changeCardamount(event){
@@ -71,11 +81,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">The Marvellous Mechanical Tablet Weaving Thing.</h1>
-          <BasicTour />
-        </header>
+        <Header />
 
         <div className="app-body">
           <div className="format-contorls">
