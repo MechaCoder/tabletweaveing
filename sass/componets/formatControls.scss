@@ -57,13 +57,9 @@
     input[type="button"]{
         background-color: red;
         color: #fff;
+        // width: 50%;
         &[value="Load"]{
-            //background-color: pink;
             float: right;
-            // margin-right: 25px;
-        }
-        &[value="delete"]{
-            // margin-left: 25px;
         }
     }
     
