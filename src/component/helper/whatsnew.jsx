@@ -69,5 +69,9 @@ const steps = [
     {
         selector: '.controls>.picker',
         content: `I have made some changes to the picker so you can choose diffrent collor pickers`
+    },
+    {
+        selector: '.savemod a',
+        content: `you can now push a saved though to a work bench page.`
     }
 ]
