@@ -14,6 +14,10 @@ class Pattentable extends Component {
             'num': props.numbers
         }
 
+        if(this.state.displayPatten === undefined){
+            this.state.displayPatten = {}
+        }
+
     }
 
     componentWillReceiveProps(newProp){
@@ -34,9 +38,7 @@ class Pattentable extends Component {
             var temp = [];
                 for(var col = 0; col < this.state.cards_type; col++){ // col
                     
-                    // if(this.state.displayPatten === undefined){
-                    //     continue;
-                    // }
+                    
                     var displayColor = this.state['displayPatten'][ (row + "|" + col) ];
 
                     var item = <td data-row={row} data-col={col} style={{ 'background-color': displayColor }} onClick={this.state.passPatten}></td>
