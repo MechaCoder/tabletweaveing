@@ -50,7 +50,7 @@ class Wbtable extends Component {
 
         var tableInternal = [];
 
-        for(var rows = 0; rows < this.state.current_patten.d_cols; rows++){
+        for(var rows = 0; rows < this.state.current_patten.d_cols; rows++){{
             var colstemp = []
             
             for( var cols = 0; cols < this.state.current_patten.d_rows; cols++){
@@ -67,7 +67,7 @@ class Wbtable extends Component {
 
             tableInternal.unshift(<tr>{colstemp}</tr>)
 
-        
+        }
 
         }
 

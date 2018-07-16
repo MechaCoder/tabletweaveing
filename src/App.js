@@ -43,6 +43,9 @@ class App extends Component {
     }
 
     this.state['pattenLoad'] = loaded_patten['patten'];
+    if(this.state['pattenLoad'] === undefined ){
+      this.state['pattenLoad'] = {};
+    }
     
   }
 
