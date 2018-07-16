@@ -14,6 +14,10 @@ class Save extends Component {
             "row": props.row
         }
 
+        if(this.state.save === undefined){
+            this.state.save = {}
+        }
+
         this.onNameChange = this.onNameChange.bind(this);
         this.onSubmitForm = this.onSubmitForm.bind(this);
     }
@@ -63,13 +67,13 @@ class Save extends Component {
         if(
             typeof(Storage) === 'undefined'
         ){
-            return(<div className="savemod">saveing not permmited</div>);
+            return(<div className="savemod">saveing not permmited <i>1</i> </div>);
         }
 
         if(
             typeof(this.state.save) === 'undefined'
-        ){
-            return(<div className="savemod">saveing not permmited</div>);
+        ){  
+            return(<div className="savemod">saveing not permmited <i>2</i></div>);
         }
 
         return(
@@ -78,8 +82,6 @@ class Save extends Component {
                     <input type="text" name="name" value={this.state.name} onChange={this.onNameChange} />
                     <input type="submit" value="Save" />
                 </form>
-                {this.state.col}
-                {this.state.row}
 
                 <Load lockhash={this.state.match} />
             </div>

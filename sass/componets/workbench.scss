@@ -1,0 +1,17 @@
+.wbtable {
+    table {
+        margin-left: 15%;
+    }
+    
+    td {
+        width: 80px;
+        height: 80px;
+        border: 1px solid grey;
+        
+    }
+    .highlight {
+        height: 100%;
+        opacity: 0.4;
+        background-color: yellow
+    }
+}

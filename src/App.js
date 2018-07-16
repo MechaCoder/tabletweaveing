@@ -15,12 +15,9 @@ if (all_pattens !== null && saved_patten !== null){
 
   loaded_patten = all_pattens[saved_patten];
   if(loaded_patten === undefined){
-    loaded_patten = {}
+    loaded_patten = {};
   }
 }
-
-console.log(loaded_patten.d_cols)
-
 
 class App extends Component {
   constructor(props){
@@ -29,7 +26,7 @@ class App extends Component {
     this.state = {
       cardType: 4,
       cardAmount: 10,
-      pattenLoad: loaded_patten.patten,
+      pattenLoad: {},
       pattenName: saved_patten
 
     }
@@ -44,6 +41,12 @@ class App extends Component {
     if(loaded_patten.d_cols !== undefined){
       this.state['cardType'] = loaded_patten.d_cols;
     }
+
+    console.log('loaded_patten')
+    console.log(loaded_patten)
+
+    this.state['pattenLoad'] = loaded_patten['patten'];
+    
   }
 
   changeCardamount(event){
