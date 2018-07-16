@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 // import swal from 'sweetalert2';
 
 class Load extends Component{
@@ -88,12 +89,13 @@ class Load extends Component{
 
 
         for(var i = 0; i < datakeys.length; i++){
+            var wb = '/workbench/'.concat(datakeys[i]);
 
-
-            files.push( <tr> <td className="p-title"> {datakeys[i]} </td>
+            files.push( <tr> <td className="p-title">{datakeys[i]}</td>
                 <td>
-                <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="delete" />
-                <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="Load" />
+                    <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="delete" />
+                    <input data-name={datakeys[i]} type="button" onClick={this.onButtonClick} value="Load" />
+                    <a href={wb} >Workbench</a>
                 </td>
             </tr> );
         }
