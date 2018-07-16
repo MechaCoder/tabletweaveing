@@ -6,7 +6,6 @@ import Preview from "./pattenbuilder/pattenpreviewtable";
 import Save from './saveAndLoad/save';
 
 import swal from 'sweetalert2';
-import { debug } from 'util';
 
 
 
