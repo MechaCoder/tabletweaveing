@@ -29,7 +29,6 @@ class Colorpicker extends Component {
     }
 
     handleChangeSelect(selectedOption){
-        // console.log(selectedOption.value);
         if(selectedOption === null){
             return;
         }

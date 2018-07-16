@@ -42,9 +42,6 @@ class App extends Component {
       this.state['cardType'] = loaded_patten.d_cols;
     }
 
-    console.log('loaded_patten')
-    console.log(loaded_patten)
-
     this.state['pattenLoad'] = loaded_patten['patten'];
     
   }

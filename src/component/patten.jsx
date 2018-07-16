@@ -43,7 +43,6 @@ class Patten extends Component {
     }
 
     changecolor(color){
-        // console.log(this.state);
         this.setState({'curColor': color});
     }
 
